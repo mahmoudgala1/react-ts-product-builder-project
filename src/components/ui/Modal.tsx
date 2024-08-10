@@ -18,7 +18,7 @@ export default function Modal({ isOpen, closeModal, title, children }: Iprops) {
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="reative z-10" onClose={closeModal}>
           <TransitionChild
             as={Fragment}
             enter="ease-out duration-300"
@@ -31,7 +31,7 @@ export default function Modal({ isOpen, closeModal, title, children }: Iprops) {
             <div className="fixed inset-0 bg-black/25" />
           </TransitionChild>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0 backdrop-blur-sm overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
               <TransitionChild
                 as={Fragment}
@@ -46,7 +46,7 @@ export default function Modal({ isOpen, closeModal, title, children }: Iprops) {
                   {title && (
                     <DialogTitle
                       as="h3"
-                      className="text-lg font-medium leading-6 text-gray-900"
+                      className="text-lg font-medium leading-6 text-gray-900 text-center"
                     >
                       {title}
                     </DialogTitle>
